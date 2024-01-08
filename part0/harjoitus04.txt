@@ -1,0 +1,23 @@
+
+Tehtävä 0.4
+
+sequenceDiagram
+	participant browser (Chrome)
+	participant server	(Express)
+	
+	browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+	activate server
+	server->>browser: [
+			{
+				"content": "test",
+				"date": "2024-01-08T03:15:28.681Z"
+			},
+			{
+				"content": "test",
+				"date": "2024-01-08T03:15:42.902Z"
+			},
+			{
+				"content": "test3",
+				"date": "2024-01-08T03:20:00.448Z"
+			}, ... ]
+	deactivate server

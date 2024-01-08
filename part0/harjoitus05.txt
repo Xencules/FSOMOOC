@@ -1,0 +1,40 @@
+Tehtävä 0.5
+
+sequenceDiagram
+	participant browser (Chrome)
+	participant server	(Express)
+	
+	browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
+	activate server
+	server->>browser: HTML Document
+	deactivate server
+	
+	browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+	activate server
+	server->>browser: CSS-file
+	deactivate server
+	
+	browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+	activate server
+	server->>browser: JavaScript Document
+	deactivate server
+	
+	browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+	activate server
+	server->>browser: [
+			{
+			"content": "gi",
+			"date": "2024-01-08T03:23:37.778Z"
+			},
+			{
+			"content": "new",
+			"date": "2024-01-08T03:28:40.029Z"
+			},
+			{
+			"content": "202-",
+			"date": "2024-01-08T03:45:04.286Z"
+			},
+			{
+			"content": "this is a test 01/07/2024",
+			"date": "2024-01-08T04:04:10.420Z" ... ]
+	deactivate server
