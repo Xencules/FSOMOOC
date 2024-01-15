@@ -2,10 +2,15 @@ import React from 'react'
 
 
 const Part = ({ part }) => {
-  return <p>{part.name} {part.exercise}</p>;
+
+  return (
+    <div>
+      <p>{part.name} {part.exercises}</p>
+    </div>
+    );
 };
 
-const Content = (data) => {
+const Content = ({ part1, part2, part3 }) => {
   return (
     <div>
       <Part part={part1}/>

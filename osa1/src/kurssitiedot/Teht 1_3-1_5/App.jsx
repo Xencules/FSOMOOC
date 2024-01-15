@@ -15,9 +15,6 @@ const App = () => {
   
   const totalExcercises = part1.exercises + part2.exercises + part3.exercises;
 
-
-  console.log(allExercises[0].part);
-
   return (
     <div>
       <Header course={course} />
